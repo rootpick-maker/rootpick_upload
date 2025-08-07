@@ -1,9 +1,7 @@
 services:
   - type: web
     name: rootpick-upload
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    autoDeploy: false
-    region: oregon
+    runtime: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars: []
