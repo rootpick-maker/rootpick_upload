@@ -18,7 +18,8 @@ def upload_file():
         return jsonify({'error': 'No selected file'}), 400
     file_path = os.path.join(UPLOAD_FOLDER, file.filename)
     file.save(file_path)
-    return jsonify({'message': 'File uploaded successfully', 'path': file_path})
+    return jsonify({'message': 'File uploaded successfully', 'file_path': file_path}), 200
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
+# ⚠️ 이 부분 제거 또는 조건으로 감싸야 함
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=10000)
