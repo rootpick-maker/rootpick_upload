@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: rootpick-upload
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    branch: main
+    plan: starter
+    region: oregon
