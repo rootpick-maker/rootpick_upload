@@ -3,4 +3,4 @@ services:
     name: rootpick-upload
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn app"
